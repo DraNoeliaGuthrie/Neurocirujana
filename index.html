@@ -16,682 +16,533 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
     <div id="loading-screen">
         <div class="loading-content">
-            <div class="loading-logo">
-                <i class="fas fa-brain"></i>
+            <div class="loading-logo">NG</div>
+            <div class="loading-text">Cargando...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
             </div>
         </div>
     </div>
 
-    <header class="header" id="header">
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <div class="logo" onclick="scrollToSection('inicio')" style="cursor: pointer;">
-                    <i class="fas fa-brain"></i>
-                    <span>Dra. Noelia Guthrie</span>
-                </div>
-                <p class="tagline">Neurocirujana Especialista</p>
-            </div>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-                <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-                <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#galeria" class="nav-link">Galería</a></li>
-                <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
-            </ul>
-            
-            <div class="nav-actions">
-                <button class="btn btn-primary" onclick="scrollToSection('contacto')">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span class="btn-text">Agendar Cita</span>
-                </button>
-                <button class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-</header>
-
-    <section id="inicio" class="hero">
-    <div class="hero-slider">
-        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
-            <div class="hero-overlay"></div>
+    <header id="header" class="header">
+        <nav class="navbar">
             <div class="container">
-                <div class="hero-content" data-aos="fade-up">
-                        <div class="hero-badge">
-                            <i class="fas fa-award"></i>
-                            <span>Más de 10 años de experiencia</span>
-                        </div>
-                        <h1 class="hero-title">
-                            Comprometida con tu 
-                            <span class="text-gradient">salud neurológica</span>
-                        </h1>
-                        <p class="hero-description">
-                            Especialista en neurocirugía con formación internacional, 
-                            dedicada a brindar tratamientos de vanguardia con el más alto 
-                            nivel de precisión y cuidado humano.
-                        </p>
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <div class="stat-number" data-count="300">0</div>
-                                <div class="stat-label">Cirugías Exitosas</div>
-                            </div>
-                        </div>
-                        <div class="hero-actions">
-                            <button class="btn btn-primary btn-lg" onclick="scrollToSection('contacto')">
-                                <i class="fas fa-calendar-check"></i>
-                                Agendar Consulta
-                            </button>
-                            <button class="btn btn-primary btn-lg" onclick="scrollToSection('sobre-mi')">
-                                <i class="fas fa-play"></i>
-                                Conocer más
-                            </button>
-                        </div>
+                <a href="#hero" class="nav-brand">
+                    <div class="logo">
+                        <i class="fas fa-brain"></i>
+                        Dra. Noelia Guthrie
                     </div>
-                </div>
-            </div>
-            
-            <div class="hero-slide" style="background-image: url('https://ucontinental.edu.pe/carrera/assets/img/radiologia.webp');">
-                <div class="hero-overlay"></div>
-                <div class="container">
-                    <div class="hero-content" data-aos="fade-up">
-                        <div class="hero-badge">
-                            <i class="fas fa-microscope"></i>
-                            <span>Tecnología de vanguardia</span>
-                        </div>
-                        <h1 class="hero-title">
-                            Cirugía de precisión con 
-                            <span class="text-gradient">tecnología avanzada</span>
-                        </h1>
-                        <p class="hero-description">
-                            Utilizamos los equipos más modernos y técnicas mínimamente 
-                            invasivas para garantizar los mejores resultados en cada procedimiento.
-                        </p>
-                        <div class="hero-actions">
-                            <button class="btn btn-primary btn-lg" onclick="scrollToSection('servicios')">
-                                <i class="fas fa-stethoscope"></i>
-                                Ver Servicios
-                            </button>
-                            <button class="btn btn-primary btn-lg" onclick="scrollToSection('galeria')">
-                                <i class="fas fa-images"></i>
-                                Ver Instalaciones
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="hero-nav">
-        <button class="hero-nav-btn active" onclick="changeHeroSlide(0)"></button>
-        <button class="hero-nav-btn" onclick="changeHeroSlide(1)"></button>
-    </div>
-    <div class="scroll-indicator">
-        <div class="scroll-mouse">
-            <div class="scroll-wheel"></div>
-        </div>
-        <span>Desliza para explorar</span>
-    </div>
-    </section>
-
-    <section id="sobre-mi" class="about-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">Sobre la Doctora</span>
-                <h2 class="section-title">Dra. Noelia Guthrie</h2>
-                <p class="section-description">
-                    Neurocirujana especializada en cirugía invasiva con un enfoque integral 
-                    que combina experiencia técnica excepcional con atención personalizada
-                </p>
-            </div>
-
-            <div class="about-content">
-                <div class="about-image" data-aos="fade-right">
-                    <div class="image-container">
-                        <img src="tia.webp" alt="Dra. Noelia Guthrie" class="doctor-image">
-                        <div class="image-overlay">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-info" data-aos="fade-left">
-                    <div class="tab-navigation">
-                        <button class="tab-btn active" onclick="switchTab('experiencia')">Experiencia</button>
-                        <button class="tab-btn" onclick="switchTab('filosofia')">Filosofía</button>
-                        <button class="tab-btn" onclick="switchTab('innovacion')">Innovación</button>
-                    </div>
-
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="experiencia">
-                            <h3>Mi Trayectoria Profesional</h3>
-                            <p>Con una experiencia más que calificada neurocirugía, he tenido el privilegio de formar parte de equipos médicos de élite en hospitales de renombre internacional. Mi formación en la Universidad Católica San Pablo y residencia en el Hospital Da Restauração y titulada en World Federation of Neurosurgical Societies los cuales me proporcionaron las bases sólidas para desarrollar técnicas quirúrgicas avanzadas y un enfoque integral del cuidado neurológico.</p>
-                        </div>
-                        <div class="tab-pane" id="filosofia">
-                            <h3>Mi Filosofía de Atención</h3>
-                            <p>Creo firmemente que cada paciente merece una atención personalizada y compasiva. Mi enfoque combina la precisión técnica con la calidez humana, asegurando que cada persona se sienta escuchada, comprendida y cuidada durante todo su proceso de tratamiento.</p>
-                        </div>
-                        <div class="tab-pane" id="innovacion">
-                            <h3>Compromiso con la Innovación</h3>
-                            <p>Me mantengo constantemente actualizada con las últimas tecnologías y técnicas en neurocirugía. Participo regularmente en conferencias internacionales y colaboro en investigaciones que buscan mejorar los resultados quirúrgicos y la calidad de vida de los pacientes.</p>
-                        </div>
-                    </div>
-
-                    <div class="specializations">
-                        <h4>Especialidades</h4>
-                        <div class="spec-grid">
-                            <div class="spec-item">
-                                <i class="fas fa-brain"></i>
-                                <span>Cirugía de Tumores Cerebrales</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-heart-pulse"></i>
-                                <span>Neurocirugía Vascular</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-x-ray"></i>
-                                <span>Cirugía de Columna Vertebral</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-child"></i>
-                                <span>Neurocirugía Pediátrica</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-crosshairs"></i>
-                                <span>Cirugía Estereotáxica</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-cog"></i>
-                                <span>Neurocirugía Estimulacion Cerebrar Profunda</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-primary" onclick="scrollToSection('servicios')">
-                        <i class="fas fa-arrow-right"></i>
-                        Conocer mis servicios
+                    <span class="tagline">Neurocirujana Especialista</span>
+                </a>
+                <ul id="nav-menu" class="nav-menu">
+                    <li><a href="#hero" class="nav-link">Inicio</a></li>
+                    <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                    <li><a href="#services" class="nav-link">Servicios</a></li>
+                    <li><a href="#gallery" class="nav-link">Galería</a></li>
+                    <li><a href="#location" class="nav-link">Ubicación</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i> Agendar Cita
+                    </a>
+                    <button id="hamburger" class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </button>
                 </div>
             </div>
+        </nav>
+    </header>
 
-            <div class="achievements" data-aos="fade-up">
-                <h3>Logros y Reconocimientos</h3>
-                <div class="achievements-grid">
-                    <div class="achievement-item">
-                        <div class="achievement-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="achievement-content">
-                            <h4>Formación Académica</h4>
-                            <p>Especialización en Neurocirugía - Universidad Católica San Pablo</p>
-                        </div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <div class="achievement-content">
-                            <h4>Certificaciones</h4>
-                            <p>Harvard en Neurocirugía y Cirugía de Columna</p>
-                        </div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="achievement-content">
-                            <h4>Experiencia Clínica</h4>
-                            <p>Más de 300 cirugías neurológicas exitosas</p>
-                        </div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <div class="achievement-content">
-                            <h4>Reconocimientos</h4>
-                            <p>Miembro de Stereotactic and Functional Neurosurgery (WSSFN)</p>
-                        </div>
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-slider">
+                <div class="hero-slide active" style="background-image: url('/images/hero-slide-1.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('/images/hero-slide-2.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('/images/hero-slide-3.jpg');"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i> Más de 10 años de experiencia
+                </div>
+                <h1 class="hero-title">Comprometida con tu <span class="text-gradient">salud neurológica</span></h1>
+                <p class="hero-description">Especialista en neurocirugía con formación internacional, dedicada a brindar tratamientos de vanguardia con el más alto nivel de precisión y cuidado humano.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">Cirugías Exitosas</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="servicios" class="services-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">Servicios Médicos</span>
-                <h2 class="section-title">Tratamientos Especializados</h2>
-                <p class="section-description">
-                    Ofrezco una amplia gama de servicios neuroquirúrgicos utilizando 
-                    las técnicas más avanzadas y equipos de última generación
-                </p>
-            </div>
-
-            <div class="services-container">
-                <div class="services-nav" data-aos="fade-right">
-                    <div class="service-nav-item active" onclick="showService('cerebral')">
-                        <div class="service-nav-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="service-nav-content">
-                            <h4>Cirugía Cerebral</h4>
-                            <p>Tratamientos especializados del cerebro</p>
-                        </div>
-                    </div>
-                    <div class="service-nav-item" onclick="showService('columna')">
-                        <div class="service-nav-icon">
-                            <i class="fas fa-x-ray"></i>
-                        </div>
-                        <div class="service-nav-content">
-                            <h4>Cirugía de Columna</h4>
-                            <p>Procedimientos de columna vertebral</p>
-                        </div>
-                    </div>
-                    <div class="service-nav-item" onclick="showService('traumas')">
-                        <div class="service-nav-icon">
-                            <i class="fas fa-ambulance"></i>
-                        </div>
-                        <div class="service-nav-content">
-                            <h4>Neurocirugía de Traumas</h4>
-                            <p>Tratamiento de lesiones traumáticas</p>
-                        </div>
-                    </div>
-                    <div class="service-nav-item" onclick="showService('nervios')">
-                        <div class="service-nav-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <div class="service-nav-content">
-                            <h4>Neurocirugía de Nervios Periféricos</h4>
-                            <p>Reparación y tratamiento de nervios</p>
-                        </div>
-                    </div>
-                    <div class="service-nav-item" onclick="showService('consultas')">
-                        <div class="service-nav-icon">
-                            <i class="fas fa-stethoscope"></i>
-                        </div>
-                        <div class="service-nav-content">
-                            <h4>Consultas Neurológicas</h4>
-                            <p>Diagnóstico y seguimiento</p>
-                        </div>
-                    </div>
-                    <div class="service-nav-item" onclick="showService('emergencias')">
-                        <div class="service-nav-icon">
-                            <i class="fas fa-ambulance"></i>
-                        </div>
-                        <div class="service-nav-content">
-                            <h4>Emergencias</h4>
-                            <p>Atención de urgencias 24/7</p>
-                        </div>
-                    </div>       
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i> Agendar Consulta
+                    </a>
+                    <a href="#about" class="btn btn-outline btn-lg">Conocer más</a>
                 </div>
+            </div>
+            <div class="hero-nav">
+                <button class="hero-nav-btn active"></button>
+                <button class="hero-nav-btn"></button>
+                <button class="hero-nav-btn"></button>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                Desliza para explorar
+            </div>
+        </section>
 
-                <div class="services-content" data-aos="fade-left">
-                    <div class="service-detail active" id="cerebral">
-                        <div class="service-image">
-                            <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cirugía Cerebral">
-                        </div>
-                        <div class="service-info">
-                            <h3>Cirugía Cerebral Avanzada</h3>
-                            <p>Especializada en el tratamiento quirúrgico de tumores cerebrales, epilepsia, malformaciones arteriovenosas y otras patologías del sistema nervioso central.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Resección de tumores cerebrales</li>
-                                <li><i class="fas fa-check"></i> Cirugía de epilepsia</li>
-                                <li><i class="fas fa-check"></i> Tratamiento de aneurismas</li>
-                                <li><i class="fas fa-check"></i> Cirugía de malformaciones AVM</li>
-                                <li><i class="fas fa-check"></i> Procedimientos mínimamente invasivos</li>
-                            </ul>
-                            <div class="service-stats">
-                                <div class="stat">
-                                    <span class="stat-number">200+</span>
-                                    <span class="stat-label">Cirugías realizadas</span>
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Sobre la Doctora</div>
+                    <h2 class="section-title">Dra. Noelia Guthrie</h2>
+                    <p class="section-description">Neurocirujana especializada en cirugía invasiva con un enfoque integral que combina experiencia técnica excepcional con atención personalizada</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-container">
+                            <img src="/images/doctor.jpg" alt="Dra. Noelia Guthrie" class="doctor-image">
+                            <div class="image-overlay">
+                                <div class="experience-badge">
+                                    <span class="experience-number">10+</span>
+                                    <span class="experience-text">Años de<br>Experiencia</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="service-detail" id="columna">
-                        <div class="service-image">
-                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cirugía de Columna">
+                    <div class="about-text">
+                        <div class="tab-navigation">
+                            <button class="tab-btn active" onclick="switchTab('experience')">Experiencia</button>
+                            <button class="tab-btn" onclick="switchTab('philosophy')">Filosofía</button>
+                            <button class="tab-btn" onclick="switchTab('innovation')">Innovación</button>
                         </div>
-                        <div class="service-info">
-                            <h3>Cirugía de Columna Vertebral</h3>
-                            <p>Tratamiento integral de patologías de la columna vertebral, desde hernias discales hasta deformidades complejas, utilizando técnicas mínimamente invasivas.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Hernias discales</li>
-                                <li><i class="fas fa-check"></i> Estenosis espinal</li>
-                                <li><i class="fas fa-check"></i> Fracturas vertebrales</li>
-                                <li><i class="fas fa-check"></i> Escoliosis y deformidades</li>
-                                <li><i class="fas fa-check"></i> Fusión vertebral</li>
-                            </ul>
-                            <div class="service-stats">
-                                <div class="stat">
-                                    <span class="stat-number">250+</span>
-                                    <span class="stat-label">Procedimientos</span>
-                                </div>
+                        <div class="tab-content">
+                            <div id="experience" class="tab-pane active">
+                                <h3>Mi Trayectoria Profesional</h3>
+                                <p>Con una experiencia más que calificada neurocirugía, he tenido el privilegio de formar parte de equipos médicos de élite en hospitales de renombre internacional. Mi formación en la Universidad Católica San Pablo y residencia en el Hospital Da Restauração y titulada en World Federation of Neurosurgical Societies los cuales me proporcionaron las bases sólidas para desarrollar técnicas quirúrgicas avanzadas y un enfoque integral del cuidado neurológico.</p>
+                            </div>
+                            <div id="philosophy" class="tab-pane">
+                                <h3>Mi Filosofía de Atención</h3>
+                                <p>Creo firmemente que cada paciente merece una atención personalizada y compasiva. Mi enfoque combina la precisión técnica con la calidez humana, asegurando que cada persona se sienta escuchada, comprendida y cuidada durante todo su proceso de tratamiento.</p>
+                            </div>
+                            <div id="innovation" class="tab-pane">
+                                <h3>Compromiso con la Innovación</h3>
+                                <p>Me mantengo constantemente actualizada con las últimas tecnologías y técnicas en neurocirugía. Participo regularmente en conferencias internacionales y colaboro en investigaciones que buscan mejorar los resultados quirúrgicos y la calidad de vida de los pacientes.</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="service-detail" id="consultas">
-                        <div class="service-image">
-                            <img src="https://giovanafemat.com/wp-content/uploads/2020/12/neurologia-historia-1024x683.jpg" alt="Consultas Neurológicas">
-                        </div>
-                        <div class="service-info">
-                            <h3>Consultas Neurológicas Especializadas</h3>
-                            <p>Evaluación integral y diagnóstico preciso de patologías neurológicas, con seguimiento personalizado y planes de tratamiento adaptados a cada paciente.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Evaluación neurológica completa</li>
-                                <li><i class="fas fa-check"></i> Interpretación de estudios</li>
-                                <li><i class="fas fa-check"></i> Planes de tratamiento</li>
-                                <li><i class="fas fa-check"></i> Seguimiento post-operatorio</li>
-                                <li><i class="fas fa-check"></i> Segunda opinión médica</li>
-                            </ul>
-                            <div class="service-stats">
-                                <div class="stat">
-                                    <span class="stat-number">100%</span>
-                                    <span class="stat-label">Dedicación</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">1000+</span>
-                                    <span class="stat-label">Consultas</span>
-                                </div>
+                        <div class="specializations">
+                            <h4>Especialidades</h4>
+                            <div class="spec-grid">
+                                <div class="spec-item"><i class="fas fa-brain"></i> Cirugía de Tumores Cerebrales</div>
+                                <div class="spec-item"><i class="fas fa-heart-pulse"></i> Neurocirugía Vascular</div>
+                                <div class="spec-item"><i class="fas fa-spine"></i> Cirugía de Columna Vertebral</div>
+                                <div class="spec-item"><i class="fas fa-child"></i> Neurocirugía Pediátrica</div>
+                                <div class="spec-item"><i class="fas fa-crosshairs"></i> Cirugía Estereotáxica</div>
+                                <div class="spec-item"><i class="fas fa-wave-square"></i> Neurocirugía Estimulacion Cerebrar Profunda</div>
                             </div>
                         </div>
+                        <a href="#services" class="btn btn-primary btn-full">Conocer mis servicios</a>
                     </div>
-
-                    <div class="service-detail" id="emergencias">
-                        <div class="service-image">
-                            <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Emergencias Neurológicas">
-                        </div>
-                        <div class="service-info">
-                            <h3>Atención de Emergencias 24/7</h3>
-                            <p>Disponibilidad completa para emergencias neuroquirúrgicas, con respuesta inmediata y tratamiento especializado en situaciones críticas.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Traumatismos craneoencefálicos</li>
-                                <li><i class="fas fa-check"></i> Hemorragias cerebrales</li>
-                                <li><i class="fas fa-check"></i> Accidentes cerebrovasculares</li>
-                                <li><i class="fas fa-check"></i> Compresión medular</li>
-                                <li><i class="fas fa-check"></i> Hidrocefalia aguda</li>
-                            </ul>
-                            <div class="service-stats">
-                                <div class="stat">
-                                    <span class="stat-number">24/7</span>
-                                    <span class="stat-label">Disponibilidad</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">15min</span>
-                                    <span class="stat-label">Tiempo respuesta</span>
-                                </div>
+                </div>
+                <div class="achievements">
+                    <h3>Logros y Reconocimientos</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="achievement-content">
+                                <h4>Formación Académica</h4>
+                                <p>Especialización en Neurocirugía - Universidad Católica San Pablo</p>
+                                <span class="achievement-year">2012-2016</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="service-detail" id="traumas">
-                        <div class="service-image">
-                            <img src="https://assets.neurosurgicalatlas.com/aaroncohen-gadol-com/brain-holo.png" alt="Neurocirugía de Traumas">
-                        </div>
-                        <div class="service-info">
-                            <h3>Neurocirugía de Traumas</h3>
-                            <p>Tratamiento especializado para lesiones traumáticas del cerebro y la columna vertebral, con enfoque en la estabilización y recuperación del paciente.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Traumatismos craneoencefálicos</li>
-                                <li><i class="fas fa-check"></i> Fracturas vertebrales traumáticas</li>
-                                <li><i class="fas fa-check"></i> Hematomas intracraneales</li>
-                                <li><i class="fas fa-check"></i> Lesiones medulares agudas</li>
-                                <li><i class="fas fa-check"></i> Procedimientos de emergencia</li>
-                            </ul>
-                            <div class="service-stats">
-                                <div class="stat">
-                                    <span class="stat-number">150+</span>
-                                    <span class="stat-label">Casos tratados</span>
-                                </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+                            <div class="achievement-content">
+                                <h4>Certificaciones</h4>
+                                <p>Harvard en Neurocirugía y Cirugía de Columna</p>
+                                <span class="achievement-year">2017-2018</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="service-detail" id="nervios">
-                        <div class="service-image">
-                            <img src="https://assets.neurosurgicalatlas.com/aaroncohen-gadol-com/second-opinion-blog-7-fig-1.jpg" alt="Neurocirugía de Nervios Periféricos">
+                        <div class="achievement-item">
+                            <div class="achievement-icon"><i class="fas fa-user-md"></i></div>
+                            <div class="achievement-content">
+                                <h4>Experiencia Clínica</h4>
+                                <p>Más de 300 cirugías neurológicas exitosas</p>
+                                <span class="achievement-year">2016-Presente</span>
+                            </div>
                         </div>
-                        <div class="service-info">
-                            <h3>Neurocirugía de Nervios Periféricos</h3>
-                            <p>Procedimientos avanzados para la reparación y tratamiento de lesiones o disfunciones en los nervios periféricos, mejorando la función y calidad de vida.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Reparación de nervios periféricos</li>
-                                <li><i class="fas fa-check"></i> Tratamiento de neuropatías</li>
-                                <li><i class="fas fa-check"></i> Descompresión nerviosa</li>
-                                <li><i class="fas fa-check"></i> Cirugía de tumores nerviosos</li>
-                                <li><i class="fas fa-check"></i> Transferencias nerviosas</li>
-                            </ul>
-                            <div class="service-stats">
-                                <div class="stat">
-                                    <span class="stat-number">100+</span>
-                                    <span class="stat-label">Procedimientos realizados</span>
-                                </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon"><i class="fas fa-award"></i></div>
+                            <div class="achievement-content">
+                                <h4>Reconocimientos</h4>
+                                <p>Miembro de Stereotactic and Functional Neurosurgery (WSSFN)</p>
+                                <span class="achievement-year">2020</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="galeria" class="gallery-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">Galería Visual</span>
-            </div>
-
-            <div class="gallery-carousel" data-aos="fade-up">
-                <div class="carousel-container">
-                    <div class="carousel-slide active">
-                        <img src="1.webp" alt="Sala de Cirugía Avanzada">
-                        <div class="slide-overlay">
-                            <div class="slide-content">
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Servicios Médicos</div>
+                    <h2 class="section-title">Tratamientos Especializados</h2>
+                    <p class="section-description">Ofrezco una amplia gama de servicios neuroquirúrgicos utilizando las técnicas más avanzadas y equipos de última generación</p>
+                </div>
+                <div class="services-container">
+                    <div class="services-nav">
+                        <div class="service-nav-item active" onclick="showService('cerebral')">
+                            <div class="service-nav-icon"><i class="fas fa-brain"></i></div>
+                            <div class="service-nav-content">
+                                <h4>Cirugía Cerebral</h4>
+                                <p>Tratamientos especializados del cerebro</p>
+                            </div>
+                        </div>
+                        <div class="service-nav-item" onclick="showService('columna')">
+                            <div class="service-nav-icon"><i class="fas fa-spine"></i></div>
+                            <div class="service-nav-content">
+                                <h4>Cirugía de Columna</h4>
+                                <p>Procedimientos de columna vertebral</p>
+                            </div>
+                        </div>
+                        <div class="service-nav-item" onclick="showService('trauma')">
+                            <div class="service-nav-icon"><i class="fas fa-medkit"></i></div>
+                            <div class="service-nav-content">
+                                <h4>Neurocirugía de Traumas</h4>
+                                <p>Tratamiento de lesiones traumáticas</p>
+                            </div>
+                        </div>
+                        <div class="service-nav-item" onclick="showService('nervios')">
+                            <div class="service-nav-icon"><i class="fas fa-nerve"></i></div>
+                            <div class="service-nav-content">
+                                <h4>Neurocirugía de Nervios Periféricos</h4>
+                                <p>Reparación y tratamiento de nervios</p>
+                            </div>
+                        </div>
+                        <div class="service-nav-item" onclick="showService('consultas')">
+                            <div class="service-nav-icon"><i class="fas fa-stethoscope"></i></div>
+                            <div class="service-nav-content">
+                                <h4>Consultas Neurológicas</h4>
+                                <p>Diagnóstico y seguimiento</p>
+                            </div>
+                        </div>
+                        <div class="service-nav-item" onclick="showService('emergencias')">
+                            <div class="service-nav-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="service-nav-content">
+                                <h4>Emergencias</h4>
+                                <p>Atención de urgencias 24/7</p>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="2.webp" alt="Tecnología de Vanguardia">
-                        <div class="slide-overlay">
-                            <div class="slide-content">
+                    <div class="service-details">
+                        <div id="cerebral" class="service-detail active">
+                            <div class="service-image">
+                                <img src="/images/service-cerebral.jpg" alt="Cirugía Cerebral">
+                            </div>
+                            <div class="service-info">
+                                <h3>Cirugía Cerebral Avanzada</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Resección de tumores cerebrales</li>
+                                    <li><i class="fas fa-check"></i> Cirugía de epilepsia</li>
+                                    <li><i class="fas fa-check"></i> Tratamiento de aneurismas</li>
+                                    <li><i class="fas fa-check"></i> Cirugía de malformaciones AVM</li>
+                                    <li><i class="fas fa-check"></i> Procedimientos mínimamente invasivos</li>
+                                </ul>
+                                <div class="service-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">200+</span>
+                                        <span class="stat-label">Cirugías realizadas</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="3.webp" alt="Equipo Médico Especializado">
-                        <div class="slide-overlay">
-                            <div class="slide-content">
+                        <div id="columna" class="service-detail">
+                            <div class="service-image">
+                                <img src="/images/service-columna.jpg" alt="Cirugía de Columna">
+                            </div>
+                            <div class="service-info">
+                                <h3>Cirugía de Columna Vertebral</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Hernias discales</li>
+                                    <li><i class="fas fa-check"></i> Estenosis espinal</li>
+                                    <li><i class="fas fa-check"></i> Fracturas vertebrales</li>
+                                    <li><i class="fas fa-check"></i> Escoliosis y deformidades</li>
+                                    <li><i class="fas fa-check"></i> Fusión vertebral</li>
+                                </ul>
+                                <div class="service-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">250+</span>
+                                        <span class="stat-label">Procedimientos</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="4.webp" alt="Centro de Recuperación">
-                        <div class="slide-overlay">
-                            <div class="slide-content">
+                        <div id="consultas" class="service-detail">
+                            <div class="service-image">
+                                <img src="/images/service-consultas.jpg" alt="Consultas Neurológicas">
+                            </div>
+                            <div class="service-info">
+                                <h3>Consultas Neurológicas Especializadas</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Evaluación neurológica completa</li>
+                                    <li><i class="fas fa-check"></i> Interpretación de estudios</li>
+                                    <li><i class="fas fa-check"></i> Planes de tratamiento</li>
+                                    <li><i class="fas fa-check"></i> Seguimiento post-operatorio</li>
+                                    <li><i class="fas fa-check"></i> Segunda opinión médica</li>
+                                </ul>
+                                <div class="service-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">100%</span>
+                                        <span class="stat-label">Dedicación</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">1000+</span>
+                                        <span class="stat-label">Consultas</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="5.webp" alt="Consultorios Especializados">
-                        <div class="slide-overlay">
-                            <div class="slide-content">
+                        <div id="emergencias" class="service-detail">
+                            <div class="service-image">
+                                <img src="/images/service-emergencias.jpg" alt="Emergencias 24/7">
+                            </div>
+                            <div class="service-info">
+                                <h3>Atención de Emergencias 24/7</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Traumatismos craneoencefálicos</li>
+                                    <li><i class="fas fa-check"></i> Hemorragias cerebrales</li>
+                                    <li><i class="fas fa-check"></i> Accidentes cerebrovasculares</li>
+                                    <li><i class="fas fa-check"></i> Compresión medular</li>
+                                    <li><i class="fas fa-check"></i> Hidrocefalia aguda</li>
+                                </ul>
+                                <div class="service-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">24/7</span>
+                                        <span class="stat-label">Disponibilidad</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">15min</span>
+                                        <span class="stat-label">Tiempo respuesta</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="trauma" class="service-detail">
+                            <div class="service-image">
+                                <img src="/images/service-trauma.jpg" alt="Neurocirugía de Traumas">
+                            </div>
+                            <div class="service-info">
+                                <h3>Neurocirugía de Traumas</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Traumatismos craneoencefálicos</li>
+                                    <li><i class="fas fa-check"></i> Fracturas vertebrales traumáticas</li>
+                                    <li><i class="fas fa-check"></i> Hematomas intracraneales</li>
+                                    <li><i class="fas fa-check"></i> Lesiones medulares agudas</li>
+                                    <li><i class="fas fa-check"></i> Procedimientos de emergencia</li>
+                                </ul>
+                                <div class="service-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">150+</span>
+                                        <span class="stat-label">Casos tratados</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="nervios" class="service-detail">
+                            <div class="service-image">
+                                <img src="/images/service-nervios.jpg" alt="Neurocirugía de Nervios Periféricos">
+                            </div>
+                            <div class="service-info">
+                                <h3>Neurocirugía de Nervios Periféricos</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Reparación de nervios periféricos</li>
+                                    <li><i class="fas fa-check"></i> Tratamiento de neuropatías</li>
+                                    <li><i class="fas fa-check"></i> Descompresión nerviosa</li>
+                                    <li><i class="fas fa-check"></i> Cirugía de tumores nerviosos</li>
+                                    <li><i class="fas fa-check"></i> Transferencias nerviosas</li>
+                                </ul>
+                                <div class="service-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">100+</span>
+                                        <span class="stat-label">Procedimientos realizados</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <button class="carousel-btn carousel-prev" onclick="changeSlide(-1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn carousel-next" onclick="changeSlide(1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <button class="carousel-play-pause" onclick="toggleCarouselAutoplay()">
-                    <i class="fas fa-pause" id="play-pause-icon"></i>
-                </button>
-
-                <div class="carousel-indicators">
-                    <button class="indicator active" onclick="goToSlide(0)"></button>
-                    <button class="indicator" onclick="goToSlide(1)"></button>
-                    <button class="indicator" onclick="goToSlide(2)"></button>
-                    <button class="indicator" onclick="goToSlide(3)"></button>
-                    <button class="indicator" onclick="goToSlide(4)"></button>
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Galería Visual</div>
+                    <h2 class="section-title"></h2>
+                </div>
+                <div class="gallery-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide active">
+                            <img src="/images/gallery-1.jpg" alt="Galería 1">
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <h3>Instalaciones Modernas</h3>
+                                    <p>Equipos de última generación</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/images/gallery-2.jpg" alt="Galería 2">
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <h3>Procedimientos Avanzados</h3>
+                                    <p>Técnicas mínimamente invasivas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/images/gallery-3.jpg" alt="Galería 3">
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <h3>Atención Personalizada</h3>
+                                    <p>Cuidado humano excepcional</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/images/gallery-4.jpg" alt="Galería 4">
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <h3>Equipo Especializado</h3>
+                                    <p>Profesionales de alta calidad</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn carousel-next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+                    <button class="carousel-play-pause" onclick="toggleCarouselAutoplay()">
+                        <i id="play-pause-icon" class="fas fa-pause"></i>
+                    </button>
+                    <div class="carousel-indicators">
+                        <div class="indicator active" onclick="goToSlide(0)"></div>
+                        <div class="indicator" onclick="goToSlide(1)"></div>
+                        <div class="indicator" onclick="goToSlide(2)"></div>
+                        <div class="indicator" onclick="goToSlide(3)"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="ubicacion" class="location-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">Ubicación</span>
-                <h2 class="section-title">Encuéntranos</h2>
-                <p class="section-description">
-                    Estamos ubicados en el corazón de la ciudad, con fácil acceso 
-                    y estacionamiento disponible para nuestros pacientes
-                </p>
-            </div>
-
-            <div class="location-content">
-                <div class="location-info" data-aos="fade-right">
-                    <div class="location-card">
-                        <div class="location-header">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h3>Dirección Principal</h3>
-                        </div>
-                        <div class="location-details">
-                            <p><strong>Centro Médico Neurológico</strong></p>
-                            <p>Santa Cruz - Bolivia</p>
-                            <p>Barrio Urbari - Calle Igmiri Nro. 555</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-info">
-                                <h4>Teléfono</h4>
-                                <p>+591-3-3534000</p>
-                                <span>Lun-Vie: 8:00-18:00</span>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-info">
-                                <h4>Email</h4>
-                                <p>dranoeliaguthrie.neurocirugia@gmail.com</p>
-                                <span>Respuesta en 24 hrs</span>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-info">
-                                <h4>Horarios</h4>
-                                <p>Lunes a Viernes: 8:00 - 18:00</p>
-                                <p>Sábados: 9:00 - 14:00</p>
-                                <span>Emergencias 24/7</span>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="contact-info">
-                                <h4>Estacionamiento</h4>
-                                <p>Valet parking disponible</p>
-                                <span>Gratuito para pacientes</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="location-actions">
-                        <button class="btn btn-primary" onclick="openDirections()">
-                            <i class="fas fa-directions"></i>
-                            Cómo llegar
-                        </button>
-                        <button class="btn btn-outline" onclick="scrollToSection('contacto')">
-                            <i class="fas fa-calendar-alt"></i>
-                            Agendar cita
-                        </button>
-                    </div>
+        <section id="location" class="location-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Ubicación</div>
+                    <h2 class="section-title">Encuéntranos</h2>
+                    <p class="section-description">Estamos ubicados en el corazón de la ciudad, con fácil acceso y estacionamiento disponible para nuestros pacientes</p>
                 </div>
-
-                <div class="location-map" data-aos="fade-left">
-                    <div id="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15192.093826789012!2d-63.197298!3d-17.797062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e90000fe7f0b%3A0x995958f68891a6f8!2sDra.%20Noelia%20Guthrie%20Neurocirug%C3%ADa!5e0!3m2!1ses!2sbo!4v1721391860!5m2!1ses!2sbo"
-                            width="100%" 
-                            height="400" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                <div class="location-content">
+                    <div class="location-info">
+                        <div class="location-card">
+                            <div class="location-header">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h3>Dirección Principal</h3>
+                            </div>
+                            <div class="location-details">
+                                <p>Centro Médico Neurológico</p>
+                                <p>Santa Cruz - Bolivia</p>
+                                <p>Barrio Urbari - Calle Igmiri Nro. 555</p>
+                            </div>
+                        </div>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <div class="contact-info">
+                                    <h4>Teléfono</h4>
+                                    <p>+591-3-3534000</p>
+                                    <span>Lun-Vie: 8:00-18:00</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-info">
+                                    <h4>Email</h4>
+                                    <p>dranoeliaguthrie.neurocirugia@gmail.com</p>
+                                    <span>Respuesta en 24 hrs</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                                <div class="contact-info">
+                                    <h4>Horarios</h4>
+                                    <p>Lunes a Viernes: 8:00 - 18:00</p>
+                                    <p>Sábados: 9:00 - 14:00</p>
+                                    <p>Emergencias 24/7</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-parking"></i></div>
+                                <div class="contact-info">
+                                    <h4>Estacionamiento</h4>
+                                    <p>Valet parking disponible</p>
+                                    <p>Gratuito para pacientes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-actions">
+                            <button class="btn btn-primary" onclick="openDirections()">Cómo llegar</button>
+                            <a href="#contact" class="btn btn-outline">Agendar cita</a>
+                        </div>
+                    </div>
+                    <div class="location-map">
+                        <div id="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.8898415321042!2d-63.197298!3d-17.797062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTcqwDU0JzQ4LjUiUyA2M8KwMTEnNTAuNyJX!5e0!3m2!1ses!2sbo!4v1698765432100!5m2!1ses!2sbo" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
                         <div class="map-overlay">
                             <div class="map-marker">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i class="fas fa-map-pin"></i>
                                 <span>Estamos aquí</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contacto" class="contact-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">Contacto</span>
-                <h2 class="section-title">Agenda tu Consulta</h2>
-                <p class="section-description">
-                    Estoy aquí para ayudarte. Completa el formulario y me pondré en contacto contigo lo antes posible para programar tu cita.
-                </p>
-            </div>
-
-            <div class="contact-content">
-                <div class="contact-form-container" data-aos="fade-right">
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <label for="nombre">Nombre completo</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-
-                        <div class="form-row">
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Contacto</div>
+                    <h2 class="section-title">Agenda tu Consulta</h2>
+                    <p class="section-description">Estoy aquí para ayudarte. Completa el formulario y me pondré en contacto contigo lo antes posible para programar tu cita.</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
                             <div class="form-group">
                                 <label for="email">Correo electrónico</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
-                            <div class="form-group phone-group">
-                                <label for="telefono">Teléfono</label>
+                            <div class="form-group form-row">
                                 <div class="phone-input-container">
                                     <select id="country-code" name="country-code" required>
                                         <option value="+591">Bolivia (+591)</option>
@@ -701,136 +552,118 @@
                                         <option value="+595">Paraguay (+595)</option>
                                         <option value="+598">Uruguay (+598)</option>
                                     </select>
-                                    <input type="tel" id="telefono" name="telefono" required placeholder="">
+                                    <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
                                 </div>
-                                <small class="form-hint">Selecciona tu código de país e ingresa tu número de teléfono.</small>
+                                <div class="form-hint">Selecciona tu código de país e ingresa tu número de teléfono.</div>
                             </div>
-                        </div>
-
-                        <div class="form-row">
+                            <div class="form-group form-row">
+                                <div class="form-group">
+                                    <label for="edad">Edad</label>
+                                    <input type="number" id="edad" name="edad" min="0" max="120">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fecha">Fecha preferida</label>
+                                    <input type="date" id="fecha" name="fecha">
+                                </div>
+                            </div>
                             <div class="form-group">
-                                <label for="edad">Edad</label>
-                                <input type="number" id="edad" name="edad" min="1" max="120">
+                                <label for="mensaje">Describe tu consulta o síntomas *</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="fecha">Fecha preferida</label>
-                                <input type="date" id="fecha" name="fecha">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="mensaje">Describe tu consulta o síntomas *</label>
-                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Por favor, describe detalladamente tu consulta, síntomas o motivo de la cita."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-lg btn-full">
-                            <i class="fas fa-paper-plane"></i>
-                            Enviar solicitud de cita
-                        </button>
-                    </form>
-                </div>
-
-                <div class="contact-info-sidebar" data-aos="fade-left">
-                    <div class="contact-card">
-                        <div class="contact-card-header">
-                            <i class="fas fa-user-md"></i>
-                            <h3>Contacto Directo</h3>
-                        </div>
-                        <div class="contact-methods">
-                            <a href="tel:+59171396296" class="contact-method-link">
+                            <button type="submit" class="btn btn-primary btn-full">Enviar solicitud de cita</button>
+                        </form>
+                    </div>
+                    <div class="contact-info-sidebar">
+                        <div class="contact-card">
+                            <div class="contact-card-header">
                                 <i class="fas fa-phone"></i>
-                                <span>WhatsApp: +591-71396296</span>
-                            </a>
-                            <a href="mailto:dranoeliaguthrie.neurocirugia@gmail.com" class="contact-method-link">
-                                <i class="fas fa-envelope"></i>
-                                <span>Correo: dranoeliaguthrie.neurocirugia@gmail.com</span>
-                            </a>
-                            <a href="https://facebook.com/dra.noeliaguthrie.neurocirugia" class="contact-method-link" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                                <span>Facebook</span>
-                            </a>
-                            <a href="https://instagram.com/dra.noeliaguthrie.neurocirugia" class="contact-method-link" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                                <span>Instagram</span>
-                            </a>
-                            <div class="contact-method-link">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Dirección: Barrio Urbari Calle Igmiri Nro. 555</span>
+                                <h3>Contacto Directo</h3>
+                            </div>
+                            <div class="contact-methods">
+                                <a href="https://wa.me/59171396296" class="contact-method-link" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                    WhatsApp: +591-71396296
+                                </a>
+                                <a href="mailto:dranoeliaguthrie.neurocirugia@gmail.com" class="contact-method-link">
+                                    <i class="fas fa-envelope"></i>
+                                    Correo: dranoeliaguthrie.neurocirugia@gmail.com
+                                </a>
+                                <a href="#" class="contact-method-link" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                                <a href="#" class="contact-method-link" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                                <a href="#" class="contact-method-link">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Dirección: Barrio Urbari Calle Igmiri Nro. 555
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section" data-aos="fade-up">
-                    <div class="footer-brand">
-                        <div class="footer-logo">
-                            <i class="fas fa-brain"></i>
-                            <span>Dra. Noelia Guthrie</span>
-                        </div>
-                        <p>Neurocirujana especializada en cirugía invasiva, comprometida con brindar la mejor atención médica con tecnología de vanguardia y trato humano excepcional.</p>
-                        <div class="footer-social">
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        </div>
+                <div class="footer-section footer-brand">
+                    <h3>Dra. Noelia Guthrie</h3>
+                    <p>Neurocirujana especializada en cirugía invasiva, comprometida con brindar la mejor atención médica con tecnología de vanguardia y trato humano excepcional.</p>
+                    <div class="footer-social">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-
-                <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                <div class="footer-section">
                     <h3>Servicios</h3>
                     <ul class="footer-links">
-                        <li><a href="#servicios">Cirugía Cerebral</a></li>
-                        <li><a href="#servicios">Cirugía de Columna</a></li>
-                        <li><a href="#servicios">Consultas Neurológicas</a></li>
-                        <li><a href="#servicios">Emergencias 24/7</a></li>
-                        <li><a href="#servicios">Segunda Opinión</a></li>
+                        <li><a href="#services">Cirugía Cerebral</a></li>
+                        <li><a href="#services">Cirugía de Columna</a></li>
+                        <li><a href="#services">Consultas Neurológicas</a></li>
+                        <li><a href="#services">Emergencias 24/7</a></li>
+                        <li><a href="#services">Segunda Opinión</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                <div class="footer-section">
                     <h3>Enlaces Útiles</h3>
                     <ul class="footer-links">
-                        <li><a href="#sobre-mi">Sobre la Doctora</a></li>
-                        <li><a href="#galeria">Instalaciones</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                        <li><a href="#ubicacion">Ubicación</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#about">Sobre la Doctora</a></li>
+                        <li><a href="#gallery">Instalaciones</a></li>
+                        <li><a href="#testimonials">Testimonios</a></li>
+                        <li><a href="#location">Ubicación</a></li>
+                        <li><a href="#contact">Contacto</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-section" data-aos="fade-up" data-aos-delay="300">
+                <div class="footer-section footer-contact">
                     <h3>Contacto</h3>
-                    <div class="footer-contact">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Barrio Urbari - Calle Igmiri Nro. 555<br>Santa Cruz, Bolivia</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+591 71396296</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>dranoeliaguthrie.neurocirugia@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Lunes: 7:00-10:00<br>Viernes: 10:00-12:00</span>
-                        </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Barrio Urbari - Calle Igmiri Nro. 555<br>Santa Cruz, Bolivia</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+591 71396296</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>dranoeliaguthrie.neurocirugia@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Lunes: 7:00-10:00<br>Viernes: 10:00-12:00</span>
                     </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
-                    <p>&copy; 2024 Dra. Noelia Guthrie - Neurocirujana Especialista. Todos los derechos reservados.</p>
+                    <p>© 2024 Dra. Noelia Guthrie - Neurocirujana Especialista. Todos los derechos reservados.</p>
                     <div class="footer-bottom-links">
                         <a href="#" onclick="openModal('privacy')">Política de Privacidad</a>
                         <a href="#" onclick="openModal('terms')">Términos y Condiciones</a>
@@ -840,26 +673,23 @@
         </div>
     </footer>
 
-    <button class="back-to-top" id="back-to-top" onclick="scrollToTop()">
-        <i class="fas fa-chevron-up"></i>
+    <button id="back-to-top" class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
     </button>
 
-    <div class="modal" id="modal">
+    <div id="modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 id="modal-title">Título</h3>
-                <button class="modal-close" onclick="closeModal()">
-                    <i class="fas fa-times"></i>
-                </button>
+                <h3 id="modal-title"></h3>
+                <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
             </div>
-            <div class="modal-body" id="modal-body">
-            </div>
+            <div id="modal-body" class="modal-body"></div>
         </div>
     </div>
 
-    <div class="success-message" id="success-message">
-        <div class="success-content">
-            <i class="fas fa-check-circle"></i>
+    <div id="success-message" class="success-message">
+        <i class="fas fa-check-circle"></i>
+        <div>
             <h3>¡Mensaje enviado exitosamente!</h3>
             <p>Te contactaremos pronto para confirmar tu cita.</p>
         </div>
